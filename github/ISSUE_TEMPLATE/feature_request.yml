@@ -1,0 +1,15 @@
+name: Feature request
+description: Something the backup or restore should handle
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What should be backed up or restored, and what happens today?
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where does that data live on your PC?
+      description: Folder or file paths help a lot. Replace your user name first.

@@ -1,0 +1,46 @@
+name: Bug report
+description: Something went wrong while backing up or restoring
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please don't attach a backup, a backup's README.txt, claude_desktop_config.json or .claude.json. They contain passwords, keys and account details.
+  - type: dropdown
+    id: step
+    attributes:
+      label: Where did it go wrong?
+      options:
+        - Finding Claude or my workspaces
+        - Backup
+        - Restore preview
+        - Restore with -Apply
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Paste the messages from the window, or the output of Backup-Claude.ps1 -ListOnly. Replace your user name and private folder names first.
+      render: text
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+  - type: input
+    id: desktop
+    attributes:
+      label: Claude Desktop version and install type
+      placeholder: Store app 3.x, classic installer, or not installed
+  - type: input
+    id: tool
+    attributes:
+      label: Claude Backup version
+      placeholder: Shown on the first line of the backup window, e.g. 1.0.0
