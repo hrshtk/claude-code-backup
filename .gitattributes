@@ -1,0 +1,5 @@
+# Windows scripts keep CRLF line endings: cmd.exe can misread labels in .bat files with LF endings.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.md  text
+LICENSE text

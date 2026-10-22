@@ -1,0 +1,7 @@
+# Backups hold your chats, passwords and keys - never commit them.
+Claude-Backup_*/
+claude-backup_*.zip
+*.zip.partial
+pre-restore_*/
+.claude-backup-folder
+.staging.tmp
